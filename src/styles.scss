@@ -1,1 +1,40 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Victor+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+// FONTES
+$fonte-logo: 'Major Mono Display', monospace;
+$fonte-principal: 'Victor Mono', monospace;
+$fonte-secundaria: 'Roboto', sans-serif;
+
+// FONT-SIZE
+$fonte-extra-grande: 32px;
+$fonte-grande: 24px;
+$fonte-media: 16px;
+$fonte-pequena: 12px;
+
+// CORES
+$preto: #000000;
+$cinza-escuro: #241e1b;
+$cinza-medio: #635c58;
+$branco: #f4f4f4;
+$amarelo: #ffff96;
+$laranja: #f6bf61;
+
+html, body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    
+    a {
+        text-decoration: none;
+    }
+    
+    li {
+        list-style-type: none;
+    }
+}
+

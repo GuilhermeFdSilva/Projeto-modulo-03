@@ -7,12 +7,54 @@
 mat-toolbar {
   background-color: $cinza-escuro;
 
+  div {
+    width: 1140px;
+    margin: auto;
 
-  h1 {
-    font-family: $fonte-logo;
-    font-family: $fonte-extra-grande;
-    color: $cinza-medio;
-    font-weight: bolder;
+    h1 {
+      font-family: $fonte-logo;
+      font-size: $fonte-extra-grande;
+      color: $cinza-medio;
+      font-weight: bolder;
+    }
+
+    button {
+      color: $cinza-medio;
+      font-size: $fonte-pequena;
+      margin: 10px;
+    }
+
+    .icone {
+      font-size: $fonte-icone;
+    }
+
+    article {
+      display: flex;
+      align-items: center;
+
+      input {
+        border: none;
+        border-radius: 15px;
+        height: 30px;
+        display: none;
+        padding: 0;
+        width: 0;
+        transition: padding 5s, width 5s;
+
+        &:focus {
+          display: block;
+          padding: 5px 15px;
+          width: auto;
+        }
+      }
+
+      &:hover {
+        input {
+          display: block;
+          padding: 5px 15px;
+          width: auto;
+        }
+      }
+    }
   }
-
 }

@@ -51,9 +51,14 @@ mat-grid-list {
 
 mat-toolbar {
   background-color: $cinza-escuro;
+  color: white;
 
   div {
     width: 1140px;
     margin: auto;
+
+    .filtro {
+      filter: invert(100%);
+    }
   }
 }

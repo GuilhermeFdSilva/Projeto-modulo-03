@@ -19,13 +19,26 @@ mat-toolbar {
     }
 
     button {
+      height: 50px;
+      padding: 0 15px 0 15px;
       color: $cinza-medio;
       font-size: $fonte-pequena;
-      margin: 10px;
+      transition: all 0.5s;
+
+      &:hover {
+        color: $azul;
+      }
     }
 
     .login {
       border: 1px solid $cinza-medio;
+      transition: all 0.5s;
+
+      &:hover {
+        color: $azul;
+        border: 1px solid $azul;
+        transform: scale(1.01);
+      }
     }
   }
 }

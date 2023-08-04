@@ -5,12 +5,52 @@
 }
 
 mat-grid-list {
-  background-color: $cinza-medio;
+  background-color: $preto;
+  width: 100%;
+
+  div {
+    width: 1140px;
+
+    mat-grid-tile {
+
+      h2 {
+        color: $cinza-medio;
+        font-family: $fonte-logo;
+        font-size: $fonte-rodape;
+      }
+
+      #formRodape {
+        padding: 0 100px 0;
+
+        mat-form-field {
+          width: 100%;
+        }
+
+        .botaoRodape {
+          color: $cinza-medio;
+          background-color: $cinza-escuro;
+          border: 1px solid $cinza-medio;
+          width: calc(50% - 10px);
+          height: 50px;
+          transition: all 0.5s;
+
+          &:first-of-type {
+            margin-right: 20px;
+          }
+
+          &:hover {
+            color: $azul;
+            border: 1px solid $azul;
+            transform: scale(1.01);
+          }
+        }
+      }
+    }
+  }
 }
 
 mat-toolbar {
   background-color: $cinza-escuro;
-  border-top: 1px solid $cinza-medio;
 
   div {
     width: 1140px;

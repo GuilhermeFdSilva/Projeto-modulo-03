@@ -57,6 +57,10 @@ mat-toolbar {
     width: 1140px;
     margin: auto;
 
+    h4 {
+      font-size: $fonte-pequena;
+    }
+
     .filtro {
       filter: invert(100%);
     }

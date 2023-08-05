@@ -29,9 +29,8 @@ export class RodapeComponent {
   // Controle da função de ocultsar e mostrar senha
   mostrar: boolean = true;
 
-  title: string = 'AnimeZone';
-  copyright: string = '2023 ©';
-  developer: string = 'Guilherme - Start Tech TOTVS';
+  copyright: string = 'AnimeZone 2023 © Guilherme - Start Tech TOTVS';
+
   redesSociais: Array<any> = [
     {
       nome: 'Facebook',

@@ -11,7 +11,6 @@ import { HomeComponent } from './home/home.component';
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -19,7 +18,8 @@ import { HomeComponent } from './home/home.component';
     BrowserAnimationsModule,
     // imports de componentes fixos com istandalone = true
     NavBarComponent,
-    RodapeComponent
+    RodapeComponent,
+    HomeComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

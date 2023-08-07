@@ -1,9 +1,13 @@
-<mat-grid-list cols="2" rowHeight="2:1">
-  <div>
-    <mat-grid-tile>
+<footer>
+  <div id="container">
+
+    <!-- Logo -->
+    <article>
       <h2>AnimeZone</h2>
-    </mat-grid-tile>
-    <mat-grid-tile>
+    </article>
+
+    <!-- Area de Login -->
+    <article>
       <form id="formRodape">
         <mat-form-field class="inputRodape">
           <mat-label>Usuario</mat-label>
@@ -20,12 +24,12 @@
         <button mat-button class="botaoRodape">Login</button>
         <button mat-button class="botaoRodape">Cadastrar</button>
       </form>
-    </mat-grid-tile>
+    </article>
   </div>
-</mat-grid-list>
-<mat-toolbar>
-  <div>
-    <mat-toolbar-row>
+
+  <!-- Copyright -->
+  <mat-toolbar>
+    <div>
       <h4>{{ copyright }}</h4>
       <span class="menu-spacer"></span>
       <article *ngFor="let rede of redesSociais">
@@ -35,6 +39,6 @@
           </button>
         </a>
       </article>
-    </mat-toolbar-row>
-  </div>
-</mat-toolbar>
+    </div>
+  </mat-toolbar>
+</footer>

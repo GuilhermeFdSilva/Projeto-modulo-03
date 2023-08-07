@@ -10,12 +10,16 @@ mat-toolbar {
   div {
     width: 1140px;
     margin: auto;
+    display: flex;
+    align-items: center;
 
-    h1 {
-      font-family: $fonte-logo;
-      font-size: $fonte-extra-grande;
-      color: $cinza-medio;
-      font-weight: bolder;
+    a {
+      h1 {
+        font-family: $fonte-logo;
+        font-size: $fonte-extra-grande;
+        color: $cinza-medio;
+        font-weight: bolder;
+      }
     }
 
     button {

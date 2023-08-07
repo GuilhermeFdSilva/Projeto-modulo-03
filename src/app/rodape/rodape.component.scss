@@ -1,17 +1,19 @@
 @import '../../styles.scss';
 
-.menu-spacer {
-  flex: 1 1 auto;
-}
-
-mat-grid-list {
+footer {
   background-color: $preto;
-  width: 100%;
 
-  div {
+  #container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     width: 1140px;
+    margin: auto;
+    padding: 10px 0 40px 0;
 
-    mat-grid-tile {
+    article {
+      width: 100%;
+      text-align: center;
 
       h2 {
         color: $cinza-medio;
@@ -20,7 +22,8 @@ mat-grid-list {
       }
 
       #formRodape {
-        padding: 0 100px 0;
+        width: 80%;
+        margin: auto;
 
         mat-form-field {
           width: 100%;
@@ -47,22 +50,36 @@ mat-grid-list {
       }
     }
   }
-}
 
-mat-toolbar {
-  background-color: $cinza-escuro;
-  color: white;
+  mat-toolbar {
+    background-color: $cinza-escuro;
+    color: white;
 
-  div {
-    width: 1140px;
-    margin: auto;
+    div {
+      display: flex;
+      align-items: center;
+      width: 1140px;
+      margin: auto;
 
-    h4 {
-      font-size: $fonte-pequena;
-    }
+      h4 {
+        font-size: $fonte-pequena;
+      }
 
-    .filtro {
-      filter: invert(100%);
+      .menu-spacer {
+        flex: 1 1 auto;
+      }
+
+      article {
+        a {
+          button {
+            mat-icon {
+              .filtro {
+                filter: invert(100%);
+              }
+            }
+          }
+        }
+      }
     }
   }
 }

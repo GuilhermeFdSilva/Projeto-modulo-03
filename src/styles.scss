@@ -33,7 +33,7 @@ body {
   margin: 0;
   padding: 0;
   // Evita que a página fique branca quando o usuário da scroll além dos limites
-  background-color: $cinza-escuro;
+  background-color: $cinza-escuro !important;
 
   a {
     text-decoration: none;

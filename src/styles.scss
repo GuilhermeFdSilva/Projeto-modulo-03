@@ -1,28 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Victor+Mono&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-
-// FONTES
-$fonte-logo: 'Major Mono Display',
-monospace;
-$fonte-principal: 'Victor Mono',
-monospace;
-$fonte-secundaria: 'Roboto',
-sans-serif;
-
-// FONT-SIZE
-$fonte-rodape: 60px;
-$fonte-extra-grande: 42px;
-$fonte-grande: 36px;
-$fonte-media: 24px;
-$fonte-pequena: 16px;
-
-// CORES
-$preto: #000000;
-$cinza-escuro: #202020;
-$cinza-medio: #636363;
-$branco: #f4f4f4;
-$azul: #3f51b5;
+@import 'assets/styles/variaveis.scss';
 
 html,
 body {

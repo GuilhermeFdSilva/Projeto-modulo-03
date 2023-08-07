@@ -1,4 +1,4 @@
-@import '../../styles.scss';
+@import '../../assets/styles/variaveis.scss';
 
 main {
   position: relative;
@@ -20,7 +20,7 @@ main {
     opacity: 1;
   }
 
-  .container {
+#conteiner {
     max-width: 1140px;
     padding: 30px 0 50px 0;
     margin: auto;

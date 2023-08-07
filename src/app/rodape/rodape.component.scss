@@ -1,9 +1,9 @@
-@import '../../styles.scss';
+@import '../../assets/styles/variaveis.scss';
 
 footer {
   background-color: $preto;
 
-  #container {
+  #conteiner {
     display: flex;
     flex-direction: row;
     align-items: center;

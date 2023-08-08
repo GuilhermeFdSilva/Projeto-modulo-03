@@ -1,4 +1,5 @@
 @import '../../assets/styles/variaveis.scss';
+@import '~bootstrap/dist/css/bootstrap.min.css';
 
 main {
   position: relative;
@@ -20,21 +21,102 @@ main {
     opacity: 1;
   }
 
-#conteiner {
+  #conteiner {
     max-width: 1140px;
     padding: 30px 0 50px 0;
     margin: auto;
 
-    mat-grid-list {
+    .titulo {
+      width: 100%;
+      padding: 15px;
+      border-radius: 4px;
+      text-align: center;
+      background-color: $cinza-escuro;
+      color: $cinza-medio;
 
-      mat-grid-tile {
+      h2 {
+        margin: 0;
+      }
+    }
 
-        mat-card {
-          margin: 10px;
+    #conteiner-cards {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      flex-wrap: wrap;
 
-          img {
-            width: 100%;
+      div {
+        .card {
+          display: flex;
+          flex-direction: row;
+          width: 36vw;
+          height: 260px;
+          margin: 20px 5px 0 5px;
+          overflow: hidden;
+          border: 1px solid $cinza-escuro;
+
+          .imagem-card {
+            width: 40%;
+            height: 100%;
+            background-color: $cinza-escuro;
+
+            img {
+              width: 100%;
+            }
           }
+
+          .conteudo-card {
+            width: 60%;
+            height: 100%;
+
+            .card-body {
+              height: 100%;
+              color: $branco;
+              background-color: $cinza-escuro;
+
+              .textos {
+                height: 78%;
+              }
+
+              .botoes {
+                display: flex;
+
+                button {
+                  height: 50px;
+                  border-radius: 4px;
+                  padding: 0 15px 0 15px;
+                  color: $cinza-medio;
+                  font-size: $fonte-pequena;
+                  border: 1px solid $cinza-medio;
+                  transition: all 0.5s;
+
+                  &:hover {
+                    color: $azul;
+                    border: 1px solid $azul;
+                    transform: scale(1.01);
+                  }
+                }
+
+                .favorito {
+                  width: calc(20% - 10px);
+                  margin-right: 10px;
+
+                  mat-icon {
+                    margin: 0;
+
+                  }
+                }
+
+                .ver-mais {
+                  width: 80%;
+                }
+              }
+            }
+          }
+        }
+
+        .none {
+          display: none;
         }
       }
     }

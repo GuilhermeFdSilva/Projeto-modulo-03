@@ -10,11 +10,13 @@ import { RodapeComponent } from './rodape/rodape.component';
 import { HomeComponent } from './home/home.component';
 
 // importando o array de animes
-import { AnimeService } from '../assets/data/animes.service'
+import { AnimeService } from '../assets/data/animes.service';
+import { CadastroComponent } from './cadastro/cadastro.component'
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CadastroComponent
   ],
   imports: [
     BrowserModule,

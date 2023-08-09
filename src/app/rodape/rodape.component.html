@@ -9,17 +9,23 @@
     <!-- Area de Login -->
     <article id="login" *ngIf="!this.usuario.logado">
       <form id="formRodape" (ngSubmit)="logar()">
+
+        <!-- Input do nome -->
         <mat-form-field class="inputRodape">
           <mat-label>Usuario</mat-label>
-          <input matInput placeholder="Ex. Guilherme123" [formControl]="login">
+          <input matInput placeholder="Ex. Guilherme123" [formControl]="login" required>
         </mat-form-field>
+
+        <!-- Input da senha -->
         <mat-form-field class="inputRodape">
           <mat-label>Senha</mat-label>
-          <input matInput [type]="mostrar ? 'password' : 'text'" [formControl]="senha">
+          <input matInput [type]="mostrar ? 'password' : 'text'" [formControl]="senha" required>
           <button mat-icon-button matSuffix (click)="mostrar = !mostrar" [attr.aria-label]="'Hide password'"
             [attr.aria-pressed]="mostrar">
             <mat-icon>{{mostrar ? 'visibility_off' : 'visibility'}}</mat-icon>
           </button>
+
+          <!-- Botoes para envio -->
         </mat-form-field>
         <button mat-button class="botaoRodape" type="submit">Login</button>
         <button mat-button class="botaoRodape">Cadastrar</button>

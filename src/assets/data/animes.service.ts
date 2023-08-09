@@ -1,5 +1,6 @@
 import { Injectable } from "@angular/core";
 
+// Definindo o objeto Anime
 export class Anime {
     id: number;
     nome: string;
@@ -13,7 +14,7 @@ export class Anime {
     imagem: string;
 }
 
-// Instancia globalmente o serviço
+// Criando uma instancia global de animes
 @Injectable({
     providedIn: 'root'
 })

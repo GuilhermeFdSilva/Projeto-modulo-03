@@ -44,5 +44,12 @@ mat-toolbar {
         transform: scale(1.01);
       }
     }
+
+    p {
+      font-size: $fonte-media;
+      color: $branco;
+      font-family: $fonte-principal;
+      margin: 0 0 0 20px;
+    }
   }
 }

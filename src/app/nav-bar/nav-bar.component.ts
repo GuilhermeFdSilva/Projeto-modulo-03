@@ -1,3 +1,7 @@
+// Componentes do array de animes e usuari
+import { Usuario, UsuarioService } from 'src/assets/data/user.service';
+
+import { NgIf } from '@angular/common';
 import { Component } from '@angular/core';
 // Material UI
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -8,8 +12,11 @@ import {MatButtonModule} from '@angular/material/button';
   templateUrl: './nav-bar.component.html',
   styleUrls: ['./nav-bar.component.scss'],
   standalone: true,
-  imports: [MatToolbarModule, MatButtonModule]
+  imports: [NgIf, MatToolbarModule, MatButtonModule]
 })
 export class NavBarComponent {
-
+  usuario: Usuario;
+  constructor(private usuarioService: UsuarioService) {
+    this.usuario = usuarioService.getUser();
+  }
 }

@@ -1,23 +1,91 @@
 <main>
   <div id="conteiner">
+
+    <!-- Area dos destaques -->
     <section class="titulo">
       <h2>Destaques</h2>
     </section>
-    <section id="conteiner-cards">
-      <div *ngFor="let anime of animes">
+    <section class="conteiner-cards">
+      <div *ngFor="let anime of animes; let i = index">
+
+        <!-- Inicio do card -->
         <div [class]="(!anime.destaque ? 'none' : 'card')" *ngIf="anime.destaque">
+
+          <!-- Imagem -->
           <section class="imagem-card">
             <img [src]="anime.imagem" class="img-fluid rounded-start" [alt]="anime.nome">
           </section>
+
+          <!-- Conteudo -->
           <section class="conteudo-card">
             <div class="card-body">
               <div class="textos">
                 <h5 class="card-title">{{ anime.nome }}</h5>
                 <p class="card-text">{{ anime.sinopse }}</p>
               </div>
+
+              <!-- Botoes -->
               <div class="botoes">
-                <button mat-button class="favorito">
-                  <mat-icon aria-hidden="false" aria-label="Favorito" fontIcon="star_border"></mat-icon>
+                <button mat-button [class]="anime.favorito? 'btn-favorito-ativo' : 'btn-favorito'"
+                  (click)="this.usuario.toogleFavorito(i)">
+                  <mat-icon aria-hidden="false" aria-label="Favorito"
+                    [fontIcon]="anime.favorito? 'star' : 'star_border'"></mat-icon>
+                </button>
+                <button mat-button class="ver-mais">Ver Mais</button>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <!-- Area dos favoritos -->
+    <section class="titulo">
+      <h2>Seus Favoritos</h2>
+    </section>
+
+    <!-- Se o usuario não estiver logado -->
+    <section *ngIf="!this.usuario.logado">
+      <div class="favoritos">
+        <h3>Nada para ver aqui... :&lpar;</h3>
+        <h4>Faça login ou cadastre-se</h4>
+      </div>
+    </section>
+
+    <!-- Usuario logado, mas sem favoritos -->
+    <section *ngIf="this.usuario.logado && !this.usuario.favoritosAtivos()">
+      <div class="favoritos">
+        <h3>Nada para ver aqui... :&lpar;</h3>
+        <h4>Explore e adicione seus favoritos</h4>
+      </div>
+    </section>
+
+    <!-- Usuario logado e favoritos -->
+    <section class="conteiner-cards" *ngIf="this.usuario.logado && this.usuario.favoritosAtivos()">
+      <div *ngFor="let anime of usuario.favoritos; let i = index">
+
+        <!-- Inicio do card -->
+        <div [class]="(!anime.favorito ? 'none' : 'card')" *ngIf="anime.favorito">
+
+          <!-- Imagem -->
+          <section class="imagem-card">
+            <img [src]="anime.imagem" class="img-fluid rounded-start" [alt]="anime.nome">
+          </section>
+
+          <!-- Conteudo -->
+          <section class="conteudo-card">
+            <div class="card-body">
+              <div class="textos">
+                <h5 class="card-title">{{ anime.nome }}</h5>
+                <p class="card-text">{{ anime.sinopse }}</p>
+              </div>
+
+              <!-- Botoes -->
+              <div class="botoes">
+                <button mat-button [class]="anime.favorito? 'btn-favorito-ativo' : 'btn-favorito'"
+                  (click)="this.usuario.toogleFavorito(i)">
+                  <mat-icon aria-hidden="false" aria-label="Favorito"
+                    [fontIcon]="anime.favorito? 'star' : 'star_border'"></mat-icon>
                 </button>
                 <button mat-button class="ver-mais">Ver Mais</button>
               </div>

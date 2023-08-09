@@ -1,5 +1,8 @@
+// Componentes do usuari
+import { Usuario, UsuarioService } from 'src/assets/data/user.service';
+
 import { Component } from '@angular/core';
-import { NgFor } from '@angular/common';
+import { NgFor, NgIf } from '@angular/common';
 // Mterial UI
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -16,6 +19,7 @@ import { MatIconModule } from '@angular/material/icon';
   standalone: true,
   imports: [
     NgFor,
+    NgIf,
     MatGridListModule,
     MatToolbarModule,
     MatButtonModule,
@@ -26,6 +30,11 @@ import { MatIconModule } from '@angular/material/icon';
   ]
 })
 export class RodapeComponent {
+  usuario: Usuario;
+  constructor(private usuarioService: UsuarioService) {
+    this.usuario = usuarioService.getUser();
+  }
+
   // Controle da função de ocultsar e mostrar senha
   mostrar: boolean = true;
 

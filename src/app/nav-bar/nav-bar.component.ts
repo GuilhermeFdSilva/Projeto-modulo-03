@@ -5,7 +5,7 @@ import { NgIf } from '@angular/common';
 import { Component } from '@angular/core';
 // Material UI
 import { MatToolbarModule } from '@angular/material/toolbar';
-import {MatButtonModule} from '@angular/material/button';
+import { MatButtonModule } from '@angular/material/button';
 
 @Component({
   selector: 'app-nav-bar',
@@ -16,7 +16,7 @@ import {MatButtonModule} from '@angular/material/button';
 })
 export class NavBarComponent {
   usuario: Usuario;
-  constructor(private usuarioService: UsuarioService) {
+  constructor(usuarioService: UsuarioService) {
     this.usuario = usuarioService.getUser();
   }
 }

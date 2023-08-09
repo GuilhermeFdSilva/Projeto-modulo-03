@@ -1,6 +1,7 @@
 // Componentes do usuari
 import { Usuario, UsuarioService } from 'src/assets/data/user.service';
 
+import { FormControl, Validators, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Component } from '@angular/core';
 import { NgFor, NgIf } from '@angular/common';
 // Mterial UI
@@ -9,8 +10,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { FormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
+import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-rodape',
@@ -18,6 +19,8 @@ import { MatIconModule } from '@angular/material/icon';
   styleUrls: ['./rodape.component.scss'],
   standalone: true,
   imports: [
+    FormsModule,
+    ReactiveFormsModule,
     NgFor,
     NgIf,
     MatGridListModule,
@@ -25,21 +28,21 @@ import { MatIconModule } from '@angular/material/icon';
     MatButtonModule,
     MatInputModule,
     MatFormFieldModule,
-    FormsModule,
-    MatIconModule
+    MatIconModule,
+    MatSnackBarModule
   ]
 })
 export class RodapeComponent {
   usuario: Usuario;
-  constructor(private usuarioService: UsuarioService) {
+  constructor(private usuarioService: UsuarioService, private popup: MatSnackBar) {
     this.usuario = usuarioService.getUser();
   }
 
   // Controle da função de ocultsar e mostrar senha
   mostrar: boolean = true;
 
+  // Copiei por que achei bonito kkk
   copyright: string = 'AnimeZone 2023 © Guilherme - Start Tech TOTVS';
-
   redesSociais: Array<any> = [
     {
       nome: 'Facebook',
@@ -57,4 +60,19 @@ export class RodapeComponent {
       icone: 'https://i.ibb.co/12YfRcr/linkedin.png'
     }
   ];
+
+  // Login
+  login: FormControl = new FormControl('');
+  senha: FormControl = new FormControl('');
+
+  logar() {
+    if (this.login.value === this.usuario.getLogin() && this.senha.value === this.usuario.getSenha()) {
+      this.usuario.logado = true;
+
+      // Emite para os ouvintes que o usuario logou
+      this.usuarioService.eventoLogin.emit(true);
+      return;
+    }
+    this.popup.open('Usuario ou senha incorretos', 'ok');
+  }
 }

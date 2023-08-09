@@ -10,7 +10,7 @@ import { NgFor, NgIf } from '@angular/common';
 // Material UI
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
-import {MatSnackBar, MatSnackBarModule} from '@angular/material/snack-bar';
+import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
 
 
 @Component({
@@ -31,9 +31,17 @@ export class HomeComponent {
     } else {
       this.animes = animeService.getAnimes();
     }
+
+    // Cadastrando o componente como ouvinte do evento de login
+    usuarioService.eventoLogin.subscribe((logado: boolean) => {
+      if (logado) {
+        this.animes = this.usuario.favoritos;
+      }
+    });
   }
 
-  popupNaoLogado(){
+  popupNaoLogado() {
     this.popup.open('Faça login e adicione seus favoritos', 'ok');
   }
+
 }

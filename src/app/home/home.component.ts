@@ -6,9 +6,11 @@ import { Anime } from './../../assets/data/animes.service';
 
 import { Component } from '@angular/core';
 import { NgFor, NgIf } from '@angular/common';
+
 // Material UI
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import {MatSnackBar, MatSnackBarModule} from '@angular/material/snack-bar';
 
 
 @Component({
@@ -16,18 +18,22 @@ import { MatIconModule } from '@angular/material/icon';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
   standalone: true,
-  imports: [NgFor, NgIf, MatButtonModule, MatIconModule]
+  imports: [NgFor, NgIf, MatButtonModule, MatIconModule, MatSnackBarModule]
 })
 export class HomeComponent {
   usuario: Usuario;
   animes: Array<Anime>;
 
-  constructor(private usuarioService: UsuarioService, private animeService: AnimeService) {
+  constructor(usuarioService: UsuarioService, animeService: AnimeService, private popup: MatSnackBar) {
     this.usuario = usuarioService.getUser();
     if (this.usuario.logado) {
       this.animes = this.usuario.favoritos;
     } else {
       this.animes = animeService.getAnimes();
     }
+  }
+
+  popupNaoLogado(){
+    this.popup.open('Faça login e adicione seus favoritos', 'ok');
   }
 }

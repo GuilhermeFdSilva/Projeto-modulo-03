@@ -14,10 +14,6 @@ export class Anime {
     imagem: string;
 }
 
-// Criando uma instancia global de animes
-@Injectable({
-    providedIn: 'root'
-})
 export class AnimeService {
     private animes: Array<Anime> = [
         {

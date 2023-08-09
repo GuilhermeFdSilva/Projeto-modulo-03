@@ -8,7 +8,7 @@ export class Usuario {
     private email: string;
     favoritos: Array<Anime>;
     logado: boolean = false;
-    constructor(){
+    constructor() {
         const animeService: AnimeService = new AnimeService();
         this.favoritos = animeService.getAnimes();
     }
@@ -25,22 +25,24 @@ export class Usuario {
     }
 
     // Setters
-    setLogin(login: string){
+    setLogin(login: string) {
         this.login = login;
     }
-    setSenha(senha: string){
+    setSenha(senha: string) {
         this.senha = senha;
     }
-    setEmail(email: string){
+    setEmail(email: string) {
         this.email = email;
     }
 
     toogleFavorito(indice: number) {
-        this.favoritos[indice].favorito = !this.favoritos[indice].favorito;
+        if (this.logado) {
+            this.favoritos[indice].favorito = !this.favoritos[indice].favorito;
+        }
     }
     favoritosAtivos() {
-         let qtdFavoritos = this.favoritos.filter((anime) => anime.favorito).length;
-        return qtdFavoritos === 0? false : true;
+        let qtdFavoritos = this.favoritos.filter((anime) => anime.favorito).length;
+        return qtdFavoritos === 0 ? false : true;
     }
 }
 
@@ -50,7 +52,7 @@ export class Usuario {
 })
 export class UsuarioService {
     usuario: Usuario = new Usuario();
-        
+
     getUser() {
         return this.usuario;
     }

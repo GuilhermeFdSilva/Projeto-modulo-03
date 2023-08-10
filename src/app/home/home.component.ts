@@ -1,4 +1,4 @@
-// Componentes do array de animes e usuari
+// Componentes do array de animes e usuário
 import { Usuario } from 'src/assets/data/user.service';
 import { UsuarioService } from 'src/assets/data/user.service';
 import { AnimeService } from './../../assets/data/animes.service';

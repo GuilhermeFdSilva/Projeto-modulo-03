@@ -1,7 +1,7 @@
 import { Injectable, EventEmitter } from "@angular/core";
 import { Anime, AnimeService } from "./animes.service";
 
-// Definindo o objeto usuario
+// Definindo o objeto usuário
 export class Usuario {
     private login: string = 'gui';
     private senha: string = '123';
@@ -36,7 +36,7 @@ export class Usuario {
         this.email = email;
     }
 
-    toogleFavorito(indice: number) {
+    toggleFavorito(indice: number) {
         if (this.logado) {
             this.favoritos[indice].favorito = !this.favoritos[indice].favorito;
         }
@@ -47,7 +47,7 @@ export class Usuario {
     }
 }
 
-// Criando uma instancia global de usuario
+// Criando uma instância global de usuario
 @Injectable({
     providedIn: 'root'
 })

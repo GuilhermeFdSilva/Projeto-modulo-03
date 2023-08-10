@@ -1,4 +1,4 @@
-// Componentes do array de animes e usuari
+// Componentes do usuário
 import { Usuario, UsuarioService } from 'src/assets/data/user.service';
 
 import { NgIf } from '@angular/common';

@@ -1,5 +1,3 @@
-import { Injectable } from "@angular/core";
-
 // Definindo o objeto Anime
 export class Anime {
     id: number;

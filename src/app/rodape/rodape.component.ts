@@ -73,6 +73,6 @@ export class RodapeComponent {
       this.usuarioService.eventoLogin.emit(true);
       return;
     }
-    this.popup.open('Usuario ou senha incorretos', 'ok');
+    this.popup.open('Usuário ou senha incorretos', 'ok');
   }
 }

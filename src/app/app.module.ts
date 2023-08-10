@@ -22,7 +22,7 @@ import { CadastroComponent } from './cadastro/cadastro.component'
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    // imports de componentes fixos com istandalone = true
+// Imports de componentes fixos com istandalone = true
     NavBarComponent,
     RodapeComponent,
     HomeComponent

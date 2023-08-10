@@ -27,7 +27,7 @@
               <!-- Botoes -->
               <div class="botoes">
                 <button mat-button [class]="anime.favorito? 'btn-favorito-ativo' : 'btn-favorito'"
-                  (click)="this.usuario.logado ? this.usuario.toogleFavorito(i) : popupNaoLogado()">
+                  (click)="this.usuario.logado ? this.usuario.toggleFavorito(i) : popupNaoLogado()">
                   <mat-icon aria-hidden="false" aria-label="Favorito"
                     [fontIcon]="anime.favorito? 'star' : 'star_border'"></mat-icon>
                 </button>
@@ -83,7 +83,7 @@
               <!-- Botoes -->
               <div class="botoes">
                 <button mat-button [class]="anime.favorito? 'btn-favorito-ativo' : 'btn-favorito'"
-                  (click)="this.usuario.logado ? this.usuario.toogleFavorito(i) : popupNaoLogado()">
+                  (click)="this.usuario.logado ? this.usuario.toggleFavorito(i) : popupNaoLogado()">
                   <mat-icon aria-hidden="false" aria-label="Favorito"
                     [fontIcon]="anime.favorito? 'star' : 'star_border'"></mat-icon>
                 </button>

@@ -15,8 +15,7 @@ import { CadastroComponent } from './cadastro/cadastro.component'
 
 @NgModule({
   declarations: [
-    AppComponent,
-    CadastroComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
@@ -24,8 +23,7 @@ import { CadastroComponent } from './cadastro/cadastro.component'
     BrowserAnimationsModule,
 // Imports de componentes fixos com istandalone = true
     NavBarComponent,
-    RodapeComponent,
-    HomeComponent
+    RodapeComponent
   ],
   providers: [AnimeService],
   bootstrap: [AppComponent]

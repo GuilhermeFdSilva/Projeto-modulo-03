@@ -62,8 +62,8 @@ export class RodapeComponent {
   ];
 
   // Login
-  login: FormControl = new FormControl('');
-  senha: FormControl = new FormControl('');
+  login: FormControl = new FormControl('', Validators.minLength(6));
+  senha: FormControl = new FormControl('', Validators.minLength(6));
 
   logar() {
     if (this.login.value === this.usuario.getLogin() && this.senha.value === this.usuario.getSenha()) {
@@ -74,5 +74,12 @@ export class RodapeComponent {
       return;
     }
     this.popup.open('Usuário ou senha incorretos', 'ok');
+  }
+
+  getErrorMensagem() {
+    if (this.login.hasError('minlength') || this.senha.hasError('minlength')) {
+      return 'formato invalido';
+    }
+    return '';
   }
 }

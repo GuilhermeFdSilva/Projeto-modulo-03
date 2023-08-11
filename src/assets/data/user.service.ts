@@ -3,8 +3,8 @@ import { Anime, AnimeService } from "./animes.service";
 
 // Definindo o objeto usuário
 export class Usuario {
-    private login: string;
-    private senha: string;
+    private login: string = 'gui';
+    private senha: string = '123';
     private email: string;
     favoritos: Array<Anime>;
     logado: boolean = false;

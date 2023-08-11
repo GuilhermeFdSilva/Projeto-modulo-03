@@ -7,6 +7,17 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { RodapeComponent } from './rodape/rodape.component';
+import { NgFor, NgIf } from '@angular/common';
+
+// Material UI
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatIconModule } from '@angular/material/icon';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 
 // importando o array de animes
 import { AnimeService } from '../assets/data/animes.service';
@@ -16,15 +27,24 @@ import { DetalhesComponent } from './detalhes/detalhes.component';
 @NgModule({
   declarations: [
     AppComponent,
-    DetalhesComponent
+    DetalhesComponent,
+    NavBarComponent,
+    RodapeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-// Imports de componentes fixos com istandalone = true
-    NavBarComponent,
-    RodapeComponent
+    NgIf,
+    NgFor,
+    MatToolbarModule,
+    MatButtonModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatIconModule,
+    MatSnackBarModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [AnimeService, UsuarioService],
   bootstrap: [AppComponent]

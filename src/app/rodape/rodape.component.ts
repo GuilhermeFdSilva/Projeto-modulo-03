@@ -1,34 +1,16 @@
 // Componentes do usuari
 import { Usuario, UsuarioService } from 'src/assets/data/user.service';
 
-import { FormControl, Validators, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormControl, Validators } from '@angular/forms';
 import { Component } from '@angular/core';
-import { NgFor, NgIf } from '@angular/common';
+
 // Mterial UI
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatButtonModule } from '@angular/material/button';
-import { MatInputModule } from '@angular/material/input';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatIconModule } from '@angular/material/icon';
-import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-rodape',
   templateUrl: './rodape.component.html',
   styleUrls: ['./rodape.component.scss'],
-  standalone: true,
-  imports: [
-    FormsModule,
-    ReactiveFormsModule,
-    NgFor,
-    NgIf,
-    MatToolbarModule,
-    MatButtonModule,
-    MatInputModule,
-    MatFormFieldModule,
-    MatIconModule,
-    MatSnackBarModule
-  ]
 })
 export class RodapeComponent {
   usuario: Usuario;

@@ -4,8 +4,8 @@
       <h1>AnimeZone</h1>
     </a>
     <span class="menu-spacer"></span>
-    <button mat-button routerLink="animes">Animes</button>
-    <button mat-button routerLink="cadastro">Cadastro</button>
+    <button mat-button routerLink="/animes" type="button">Animes</button>
+    <button mat-button routerLink="/cadastro" type="button">Cadastro</button>
     <button mat-button class="login" *ngIf="!this.usuario.logado">Login</button>
     <p *ngIf="this.usuario.logado">{{ this.usuario.getLogin() }}</p>
   </div>

@@ -1,0 +1,43 @@
+@import '../../assets/styles/variaveis.scss';
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+main {
+  position: relative;
+  min-height: 81vh;
+  background-image: url('../../assets/background/BigBlueMoon.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+
+  &::before {
+    // Utilizado para sobrescrever as definiçoes anteriores
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 20vh;
+    background: linear-gradient(to bottom, transparent, black);
+    opacity: 1;
+  }
+
+  #conteiner {
+    z-index: 100;
+    max-width: 1140px;
+    padding: 50px 0;
+    margin: auto;
+
+    .titulo {
+      width: 100%;
+      padding: 15px;
+      margin-bottom: 5px;
+      border-radius: 4px;
+      text-align: center;
+      background-color: $cinza-escuro;
+      color: $cinza-medio;
+
+      h2 {
+        margin: 0;
+      }
+    }
+  }
+}

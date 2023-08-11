@@ -1,0 +1,138 @@
+@import '../../assets/styles/variaveis.scss';
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+main {
+  position: relative;
+  min-height: 81vh;
+  background-image: url('../../assets/background/BigBlueMoon.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+
+  &::before {
+    // Utilizado para sobrescrever as definiçoes anteriores
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 20vh;
+    background: linear-gradient(to bottom, transparent, black);
+    opacity: 1;
+  }
+
+  #conteiner {
+    z-index: 100;
+    max-width: 1140px;
+    padding: 50px 0;
+    margin: auto;
+
+    .titulo {
+      width: 100%;
+      padding: 15px;
+      margin-bottom: 5px;
+      border-radius: 4px;
+      text-align: center;
+      background-color: $cinza-escuro;
+      color: $cinza-medio;
+
+      h2 {
+        margin: 0;
+      }
+    }
+
+    .conteiner-cards {
+      margin-bottom: 50px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      flex-wrap: wrap;
+
+      div {
+        .card {
+          display: flex;
+          flex-direction: row;
+          width: 36vw;
+          height: 260px;
+          margin: 20px 5px 0 5px;
+          overflow: hidden;
+          border: 1px solid $cinza-escuro;
+
+          .imagem-card {
+            width: 40%;
+            height: 100%;
+            background-color: $cinza-escuro;
+
+            img {
+              width: 100%;
+            }
+          }
+
+          .conteudo-card {
+            width: 60%;
+            height: 100%;
+
+            .card-body {
+              height: 100%;
+              color: $branco;
+              background-color: $cinza-escuro;
+
+              .textos {
+                height: 78%;
+
+                h5 {
+                  font-family: $fonte-principal;
+                }
+              }
+
+              .botoes {
+                display: flex;
+
+                button {
+                  height: 50px;
+                  border-radius: 4px;
+                  padding: 0 15px 0 15px;
+                  color: $cinza-medio;
+                  font-size: $fonte-pequena;
+                  border: 1px solid $cinza-medio;
+                  transition: all 0.5s;
+
+                  &:hover {
+                    color: $azul;
+                    border: 1px solid $azul;
+                    transform: scale(1.01);
+                  }
+                }
+
+                .btn-favorito {
+                  width: calc(20% - 10px);
+                  margin-right: 10px;
+
+                  mat-icon {
+                    margin: 0;
+
+                  }
+                }
+
+                .btn-favorito-ativo {
+                  background-color: $azul;
+                  width: calc(20% - 10px);
+                  margin-right: 10px;
+
+                  mat-icon {
+                    color: $branco;
+                    margin: 0;
+
+                  }
+                }
+
+                .ver-mais {
+                  width: 80%;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

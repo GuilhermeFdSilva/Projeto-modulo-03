@@ -46,5 +46,4 @@ export class HomeComponent {
   popupNaoLogado() {
     this.popup.open('Faça login e adicione seus favoritos', 'ok');
   }
-
 }

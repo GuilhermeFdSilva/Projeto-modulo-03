@@ -1,12 +1,9 @@
 // Componentes do array de animes e usuário
-import { Usuario } from 'src/assets/data/user.service';
-import { UsuarioService } from 'src/assets/data/user.service';
-import { AnimeService } from './../../assets/data/animes.service';
-import { Anime } from './../../assets/data/animes.service';
+import { Usuario, UsuarioService } from 'src/assets/data/user.service';
+import { Anime, AnimeService } from './../../assets/data/animes.service';
 
 import { Component } from '@angular/core';
 import { NgFor, NgIf } from '@angular/common';
-import { Router } from '@angular/router';
 
 // Material UI
 import { MatButtonModule } from '@angular/material/button';
@@ -25,7 +22,7 @@ export class HomeComponent {
   usuario: Usuario;
   animes: Array<Anime>;
 
-  constructor(usuarioService: UsuarioService, animeService: AnimeService, private popup: MatSnackBar, private router: Router) {
+  constructor(usuarioService: UsuarioService, animeService: AnimeService, private popup: MatSnackBar) {
     this.usuario = usuarioService.getUser();
     if (this.usuario.logado) {
       this.animes = this.usuario.favoritos;

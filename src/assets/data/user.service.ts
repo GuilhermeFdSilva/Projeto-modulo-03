@@ -3,9 +3,9 @@ import { Anime, AnimeService } from "./animes.service";
 
 // Definindo o objeto usuário
 export class Usuario {
-    private login: string = 'gui';
-    private senha: string = '123';
-    private email: string;
+    private login: string | null;
+    private senha: string | null;
+    private email: string | null;
     favoritos: Array<Anime>;
     logado: boolean = false;
 
@@ -26,14 +26,23 @@ export class Usuario {
     }
 
     // Setters
-    setLogin(login: string) {
+    setLogin(login: string | null) {
         this.login = login;
+        if (typeof login === null) {
+            this.login = '';
+        }
     }
-    setSenha(senha: string) {
+    setSenha(senha: string | null) {
         this.senha = senha;
+        if (typeof senha === null) {
+            this.senha = '';
+        }
     }
-    setEmail(email: string) {
+    setEmail(email: string | null) {
         this.email = email;
+        if (typeof email === null) {
+            this.email = '';
+        }
     }
 
     toggleFavorito(indice: number) {

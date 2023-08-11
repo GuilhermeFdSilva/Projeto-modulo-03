@@ -1,1 +1,47 @@
-<p>cadastro works!</p>
+<main>
+  <div id="conteiner">
+    <section class="titulo">
+      <h2>Cadastro</h2>
+    </section>
+
+    <!-- Container form -->
+    <section class="form-container">
+      <form (ngSubmit)="cadastrarUsuario()" *ngIf="naoCadastrado">
+        <mat-form-field class="input">
+          <mat-label>Nome</mat-label>
+          <input matInput placeholder="Joãozinho" [formControl]="nome" required>
+          <mat-error *ngIf="nome.invalid">{{ getErrorMensagem() }}</mat-error>
+        </mat-form-field>
+        <mat-form-field class="input">
+          <mat-label>Sobrenome</mat-label>
+          <input matInput placeholder="Silvasauro" [formControl]="sobreNome" required>
+          <mat-error *ngIf="sobreNome.invalid">{{ getErrorMensagem() }}</mat-error>
+        </mat-form-field>
+        <mat-form-field class="input">
+          <mat-label>Nome de Usuário</mat-label>
+          <input matInput placeholder="Joaozinho123" [formControl]="nomeDeUsuario" required>
+          <mat-error *ngIf="nomeDeUsuario.invalid">{{ getErrorMensagem() }}</mat-error>
+        </mat-form-field>
+        <mat-form-field class="input">
+          <mat-label>E-mail</mat-label>
+          <input matInput placeholder="joao.sauro@email.com" [formControl]="email" required>
+          <mat-error *ngIf="email.invalid">{{ getErrorMensagem() }}</mat-error>
+        </mat-form-field>
+        <mat-form-field class="input">
+          <mat-label>Senha</mat-label>
+          <input matInput [type]="mostrar ? 'password' : 'text'" [formControl]="senha" required>
+          <button mat-icon-button matSuffix type="button" (click)="mostrar = !mostrar" [attr.aria-label]="'Hide password'"
+            [attr.aria-pressed]="mostrar">
+            <mat-icon>{{mostrar ? 'visibility_off' : 'visibility'}}</mat-icon>
+          </button>
+          <mat-error *ngIf="senha.invalid">{{ getErrorMensagem() }}</mat-error>
+        </mat-form-field>
+        <button mat-button type="submit" class="botaoSubmit" [disabled]="(nome.invalid || sobreNome.invalid || nomeDeUsuario.invalid || email.invalid || senha.invalid ? 'true' : 'false')">Cadastrar</button>
+      </form>
+      <article *ngIf="!naoCadastrado">
+        <h3>Usuário Cadastrado :&rpar;</h3>
+        <h4>Agora é so logar</h4>
+      </article>
+    </section>
+  </div>
+</main>

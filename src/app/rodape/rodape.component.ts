@@ -5,7 +5,6 @@ import { FormControl, Validators, FormsModule, ReactiveFormsModule } from '@angu
 import { Component } from '@angular/core';
 import { NgFor, NgIf } from '@angular/common';
 // Mterial UI
-import { MatGridListModule } from '@angular/material/grid-list';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
@@ -23,7 +22,6 @@ import { MatSnackBar, MatSnackBarModule } from '@angular/material/snack-bar';
     ReactiveFormsModule,
     NgFor,
     NgIf,
-    MatGridListModule,
     MatToolbarModule,
     MatButtonModule,
     MatInputModule,

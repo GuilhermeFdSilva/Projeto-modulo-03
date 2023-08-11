@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 // Componentes do array de animes e usuário
 import { Usuario, UsuarioService } from 'src/assets/data/user.service';
 import { Anime, AnimeService } from './../../assets/data/animes.service';
@@ -22,7 +23,7 @@ export class HomeComponent {
   usuario: Usuario;
   animes: Array<Anime>;
 
-  constructor(usuarioService: UsuarioService, animeService: AnimeService, private popup: MatSnackBar) {
+  constructor(usuarioService: UsuarioService, animeService: AnimeService, private popup: MatSnackBar, private router: Router) {
     this.usuario = usuarioService.getUser();
     if (this.usuario.logado) {
       this.animes = this.usuario.favoritos;
@@ -36,6 +37,10 @@ export class HomeComponent {
         this.animes = this.usuario.favoritos;
       }
     });
+  }
+
+  verMais(animeId: string) {
+    this.router.navigate(['/detalhes', animeId]);
   }
 
   popupNaoLogado() {

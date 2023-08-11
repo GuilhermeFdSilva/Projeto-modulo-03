@@ -11,10 +11,12 @@ import { RodapeComponent } from './rodape/rodape.component';
 // importando o array de animes
 import { AnimeService } from '../assets/data/animes.service';
 import { UsuarioService } from 'src/assets/data/user.service';
+import { DetalhesComponent } from './detalhes/detalhes.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    DetalhesComponent,
   ],
   imports: [
     BrowserModule,

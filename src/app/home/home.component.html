@@ -31,7 +31,7 @@
                   <mat-icon aria-hidden="false" aria-label="Favorito"
                     [fontIcon]="anime.favorito? 'star' : 'star_border'"></mat-icon>
                 </button>
-                <button mat-button class="ver-mais">Ver Mais</button>
+                <button mat-button class="ver-mais" (click)="verMais(anime.id.toString())">Ver Mais</button>
               </div>
             </div>
           </section>
@@ -87,7 +87,7 @@
                   <mat-icon aria-hidden="false" aria-label="Favorito"
                     [fontIcon]="anime.favorito? 'star' : 'star_border'"></mat-icon>
                 </button>
-                <button mat-button class="ver-mais">Ver Mais</button>
+                <button mat-button class="ver-mais" (click)="verMais(anime.id.toString())">Ver Mais</button>
               </div>
             </div>
           </section>

@@ -25,6 +25,10 @@ main {
     padding: 50px 0;
     margin: auto;
 
+    @media (max-width: 1140px) {
+      width: 100%;
+    }
+
     .titulo {
       width: 100%;
       padding: 15px;
@@ -33,6 +37,11 @@ main {
       text-align: center;
       background-color: $cinza-escuro;
       color: $cinza-medio;
+
+      @media (max-width: 1140px) {
+        width: 80%;
+        margin: auto;
+      }
 
       h2 {
         margin: 0;
@@ -47,6 +56,9 @@ main {
       flex-wrap: wrap;
 
       div {
+        @media (max-width: 1140px) {
+          width: 80%;
+        }
         .card {
           display: flex;
           flex-direction: row;
@@ -56,10 +68,21 @@ main {
           overflow: hidden;
           border: 1px solid $cinza-escuro;
 
+          @media (max-width: 1140px) {
+            flex-direction: column;
+            width: 100%;
+            height: 500px;
+          }
+
           .imagem-card {
             width: 40%;
             height: 100%;
             background-color: $cinza-escuro;
+
+            @media (max-width: 1140px) {
+              width: 100%;
+              height: 250px;
+            }
 
             img {
               width: 100%;
@@ -70,13 +93,25 @@ main {
             width: 60%;
             height: 100%;
 
+            @media (max-width: 1140px) {
+              width: 100%;
+            }
+
             .card-body {
               height: 100%;
               color: $branco;
               background-color: $cinza-escuro;
 
+              @media (max-width: 1140px) {
+                width: 100%;
+              }
+
               .textos {
                 height: 78%;
+
+                @media (max-width: 1140px) {
+                  width: 100%;
+                }
 
                 h5 {
                   font-family: $fonte-principal;
@@ -85,6 +120,10 @@ main {
 
               .botoes {
                 display: flex;
+
+                @media (max-width: 1140px) {
+                  width: 100%;
+                }
 
                 button {
                   height: 50px;
@@ -146,6 +185,12 @@ main {
       text-align: center;
       background-color: $cinza-escuro;
       color: $cinza-medio;
+
+      @media (max-width: 1140px) {
+        width: 80%;
+        margin: auto;
+      }
+
     }
   }
 }

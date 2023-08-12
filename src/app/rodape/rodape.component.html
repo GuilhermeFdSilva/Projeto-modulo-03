@@ -40,8 +40,8 @@
     <div>
       <h4>{{ copyright }}</h4>
       <span class="menu-spacer"></span>
-      <article *ngFor="let rede of redesSociais">
-        <a [href]="rede.link" target="_blank">
+      <article>
+        <a  *ngFor="let rede of redesSociais" [href]="rede.link" target="_blank">
           <button mat-icon-button>
             <mat-icon><img [src]="rede.icone" [alt]="rede.nome" class="filtro"></mat-icon>
           </button>

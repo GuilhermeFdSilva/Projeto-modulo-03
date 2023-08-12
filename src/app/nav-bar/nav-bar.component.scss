@@ -13,12 +13,20 @@ mat-toolbar {
     display: flex;
     align-items: center;
 
+    @media (max-width: 1140px){
+      width: 100%;
+    }
+
     a {
       h1 {
         font-family: $fonte-logo;
         font-size: $fonte-extra-grande;
         color: $cinza-medio;
         font-weight: bolder;
+      }
+
+      @media (max-width: 1140px){
+        display: none;
       }
     }
 

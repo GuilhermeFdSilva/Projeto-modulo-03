@@ -12,6 +12,11 @@ footer {
     margin: auto;
     padding: 10px 0 40px 0;
 
+    @media (max-width: 1140px) {
+      width: 100%;
+      flex-direction: column;
+    }
+
     article {
       width: 100%;
       text-align: center;
@@ -20,6 +25,10 @@ footer {
         color: $cinza-medio;
         font-family: $fonte-logo;
         font-size: $fonte-rodape;
+
+        @media (max-width: 700px) {
+          font-size: $fonte-grande;
+        }
       }
 
       #formRodape {
@@ -62,8 +71,17 @@ footer {
       width: 1140px;
       margin: auto;
 
+      @media (max-width: 1140px) {
+        width: 100%;
+        flex-direction: column;
+      }
+
       h4 {
         font-size: $fonte-pequena;
+
+        @media (max-width: 1140px){
+          font-size: x-small;
+        }
       }
 
       .menu-spacer {
@@ -71,6 +89,13 @@ footer {
       }
 
       article {
+        @media (max-width: 1140px) {
+          width: 100%;
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+        }
+
         a {
           button {
             mat-icon {

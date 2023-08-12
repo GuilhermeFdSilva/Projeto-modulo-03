@@ -25,6 +25,10 @@ main {
     padding: 50px 0;
     margin: auto;
 
+    @media (max-width: 1140px) {
+      width: 100%;
+    }
+
     .titulo {
       width: 100%;
       padding: 15px;
@@ -33,6 +37,11 @@ main {
       text-align: center;
       background-color: $cinza-escuro;
       color: $cinza-medio;
+
+      @media (max-width: 1140px) {
+        width: 80%;
+        margin: auto;
+      }
 
       h2 {
         margin: 0;
@@ -43,6 +52,11 @@ main {
       background-color: $cinza-escuro;
       border-radius: 4px;
       padding: 30px;
+      margin-top: 5px;
+
+      @media (max-width: 1140px) {
+        border-radius: 0;
+      }
 
       form {
         display: flex;
@@ -51,6 +65,10 @@ main {
 
         .input {
           width: 70%;
+
+          @media (max-width: 1140px) {
+            width: 100%;
+          }
         }
 
         .botaoSubmit {

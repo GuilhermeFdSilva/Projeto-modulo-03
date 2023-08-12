@@ -9,7 +9,16 @@
           <img [src]="anime.imagem" [alt]="anime.nome">
         </article>
         <article class="detalhes">
-          
+          <h1>{{ this.anime.nome }}</h1>
+          <p> Generos:{{ this.anime.genero }}</p>
+          <p>{{ this.anime.sinopse }}</p>
+          <p>Epsodios: {{ this.anime.qtdEpisodios }}</p>
+          <p>Concluido: {{ this.concluido }}</p>
+          <button mat-button [class]="anime.favorito? 'btn-favorito-ativo' : 'btn-favorito'"
+            (click)="this.usuario.logado ? this.usuario.toggleFavorito(indice) : popupNaoLogado()">
+            <mat-icon aria-hidden="false" aria-label="Favorito" [fontIcon]="anime.favorito ? 'star' : 'star_border'">
+            </mat-icon>
+          </button>
         </article>
       </div>
     </section>

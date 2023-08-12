@@ -9,7 +9,6 @@ main {
   background-attachment: fixed;
 
   &::before {
-    // Utilizado para sobrescrever as definiçoes anteriores
     content: "";
     position: absolute;
     bottom: 0;

@@ -23,11 +23,12 @@ mat-toolbar {
         font-size: $fonte-extra-grande;
         color: $cinza-medio;
         font-weight: bolder;
+        
+        @media (max-width: 1140px){
+          font-size: x-small;
+        }
       }
 
-      @media (max-width: 1140px){
-        display: none;
-      }
     }
 
     button {
@@ -58,6 +59,10 @@ mat-toolbar {
       color: $branco;
       font-family: $fonte-principal;
       margin: 0 0 0 20px;
+
+      @media (max-width: 1140px) {
+        display: none;
+      }
     }
   }
 }

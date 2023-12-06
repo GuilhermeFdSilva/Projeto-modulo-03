@@ -1,29 +1,64 @@
 # AnimeZone
-## Projeto final do módulo 3 Start<Tech>
-Projeto desenvolvido em Angular, utilizando conceitos básicos que aprendemos durante o primeiro módulo da ferramenta.
+
+## Projeto Start<Tech>
+
+Projeto desenvolvido para conclusão do 3° módulo do curso START Tech. 🧑🏽‍💻<br>
+Esse projeto consiste em uma página de divulgação de animes, onde o usuário pode favoritá-los, e ter sua lista de favoritos. 👽
+
 ## Tecnologias Aplicadas
-- Angular
-- SCSS
-- Material UI
-- Bootstrap
-## Instalação
-Necessário ter o [Node.js](https://nodejs.org/) v16+ instalado para funcionar.
-Clone o projeto:
-```sh
+
+<a href="https://www.typescriptlang.org/docs/">
+    <img src= "https://guilhermefdsilva.github.io/read-db-myPortfolio/sticks/stick-typescript.svg" alt="TypeScript" height="28px">
+</a>
+<br>
+<a href="https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Angular_getting_started">
+    <img src="https://guilhermefdsilva.github.io/read-db-myPortfolio/sticks/stick-angular.svg" alt="Angular" height="28px">
+</a>
+<br>
+<a href="https://sass-lang.com/documentation/">
+    <img src="https://guilhermefdsilva.github.io/read-db-myPortfolio/sticks/stick-sass.svg" alt="SASS" height="28px">
+</a>
+<br>
+<a href="https://getbootstrap.com.br/docs/4.1/getting-started/introduction/">
+    <img src="https://guilhermefdsilva.github.io/read-db-myPortfolio/sticks/stick-bootstrap.svg" alt="Bootstrap" height="28px">
+</a>
+
+## Só acredito vendo 👀
+
+Você pode [acessar aqui](http://anime-zone-deploy.s3-website-sa-east-1.amazonaws.com/home)!
+
+**Ou**
+
+Rodar esse projeto em sua máquina, você vai precisar de:
+
+* [Node.js](https://nodejs.org/en) v16+
+* [NPM](https://docs.npmjs.com/cli/v6/commands/npm-install) v8+
+
+**Primeiro passo**: Certifique-se de ter o angular instalado globalmente em sua máquina.
+```
+npm install -g @angular/cli
+```
+
+**Segundo**: Clone esse repositório.
+```
 git clone https://github.com/GuilhermeFdSilva/Projeto-modulo-03.git
 ```
-Acesse a pasta:
-```sh
-cd AnimeZone/
+
+**Terceiro**: Navegue até a pasta do projeto.
 ```
-Instale o Angular e demais dependências:
-```sh
-npm i -g @angular/cli
-npm i
+cd Projeto-modulo-03/
 ```
-Rode o servidor:
-```sh
+
+**Quarto**:  Instale as dependências do projeto.
+```
+npm install
+```
+
+**Qunto**: Inicie um servidor local.
+```
 ng serve
 ```
-Agora é só acessar [http://localhost:4200](http://localhost:4200)
-Você pode criar um único usuário por sessão e marcar seus favoritos. :)
+
+Agora é só acessar em qualquer navegador [localhost:4200/](http://localhost:4200/)
+
+### Contribuições são bem-vindas! 🫱🏽‍🫲🏾

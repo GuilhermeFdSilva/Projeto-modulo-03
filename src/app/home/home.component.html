@@ -6,10 +6,10 @@
       <h2>Destaques</h2>
     </section>
     <section class="conteiner-cards">
-      <div *ngFor="let anime of animes; let i = index">
+      <div *ngFor="let anime of animes; let i = index" [class]="(!anime.destaque ? 'none' : '')">
 
         <!-- Inicio do card -->
-        <div [class]="(!anime.destaque ? 'none' : 'card')" *ngIf="anime.destaque">
+        <div class="card" *ngIf="anime.destaque">
 
           <!-- Imagem -->
           <section class="imagem-card">
@@ -62,10 +62,10 @@
 
     <!-- Usuario logado e favoritos -->
     <section class="conteiner-cards" *ngIf="this.usuario.logado && this.usuario.favoritosAtivos()">
-      <div *ngFor="let anime of usuario.favoritos; let i = index">
+      <div *ngFor="let anime of usuario.favoritos; let i = index" [class]="(!anime.destaque ? 'none' : '')">
 
         <!-- Inicio do card -->
-        <div [class]="(!anime.favorito ? 'none' : 'card')" *ngIf="anime.favorito">
+        <div class="card" *ngIf="anime.favorito">
 
           <!-- Imagem -->
           <section class="imagem-card">
